@@ -20,12 +20,17 @@ def get_home_message():
             .container {
                 text-align: center;
                 background: #fff;
-                padding: 2rem;
+                padding: 5rem;
                 border-radius: 10px;
-                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
             }
             h1 {
                 color: #007bff;
+                font-size: 5rem;
+            }
+            p {
+                font-size: 2rem;
+                margin-top: 2rem;
             }
         </style>
     </head>
@@ -38,4 +43,3 @@ def get_home_message():
     </html>
     """
     return html_content
-
