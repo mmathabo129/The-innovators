@@ -1,0 +1,35 @@
+<div class="page-content">
+    <div class="static-view">
+        <div class="section-stretch">
+            <div class="page-title p-2">
+                <h1>Claims</h1>
+                <p>View all claims</p>
+            </div>
+            <div style="flex:8"></div>
+        </div>
+        <hr class="mt-0" />
+    </div>
+    <mat-tab-group (selectedTabChange)="onTabChange($event)">
+        <mat-tab label="All Claims">
+            <div class="claims-content">
+                <ul>
+                    <li *ngFor="let claim of allClaims">{{ claim }}</li>
+                </ul>
+            </div>
+        </mat-tab>
+        <mat-tab label="Flagged Claims">
+            <div class="claims-content">
+                <ul>
+                    <li *ngFor="let claim of flaggedClaims">{{ claim }}</li>
+                </ul>
+            </div>
+        </mat-tab>
+        <mat-tab label="Successful Claims">
+            <div class="claims-content">
+                <ul>
+                    <li *ngFor="let claim of successfulClaims">{{ claim }}</li>
+                </ul>
+            </div>
+        </mat-tab>
+    </mat-tab-group>
+</div>

@@ -1,0 +1,31 @@
+<div class="page-content">
+  <div class="static-view">
+      <div class="section-stretch">
+          <div class="page-title p-2">
+              <h1>Dashboard</h1>
+              <p>Analyze AI predictions to identify potentially fraudulent claims.</p>
+          </div>
+          <div style="flex:8"></div>
+      </div>
+      <hr class="mt-0" />
+  </div>
+  <div class="dashboard-content">
+      <div class="form-group">
+          <mat-form-field appearance="fill" class="full-width">
+              <mat-label>Select a Claim</mat-label>
+              <mat-select [(value)]="selectedClaim">
+                  <mat-option *ngFor="let claim of claims" [value]="claim">
+                      {{ claim.policy_number }} ({{ claim.incident_date }})
+                  </mat-option>
+              </mat-select>
+          </mat-form-field>
+          <button mat-raised-button color="primary" (click)="getPredictions()">Analyze</button>
+      </div>
+      <div *ngIf="responseData">
+          <h2>Prediction Results</h2>
+          <div class="chart-container">
+              <p-chart type="bar" [data]="chartData" [options]="chartOptions"></p-chart>
+          </div>
+      </div>
+  </div>
+</div>
