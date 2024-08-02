@@ -3,7 +3,7 @@ from modules.handlers.predict_handler import make_predictions
 
 predict_blueprint = Blueprint('predict', __name__)
 
-@predict_blueprint.route('/predict', methods=['POST'])
+@predict_blueprint.route('api/predict', methods=['POST'])
 def predict():
     # Get the JSON data from the request
     data = request.json
