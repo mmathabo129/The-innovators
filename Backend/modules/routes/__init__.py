@@ -17,5 +17,8 @@ def create_app():
     from .home_blueprint import home_blueprint
     app.register_blueprint(home_blueprint)
 
+    from .predict_blueprint import predict_blueprint
+    app.register_blueprint(predict_blueprint)
+
     return app
 

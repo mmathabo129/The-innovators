@@ -3,7 +3,10 @@ __pycache__/
 
 # Ignore the SQLite database file
 database.db
-
+Backend/test.py
+Backend/test2.py
+test.py
+test2.py
 # Optionally, ignore other files
 *.pyc
 *.pyo
