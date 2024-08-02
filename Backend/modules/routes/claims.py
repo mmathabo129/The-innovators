@@ -6,7 +6,7 @@ claims_blueprint = Blueprint('claims', __name__)
 
 
 
-@claims_blueprint.route('api/claims', methods=['POST'])
+@claims_blueprint.route('/api/claims', methods=['POST'])
 def create_claim():
     """Create a new claim."""
     try:
@@ -34,7 +34,7 @@ def create_claim():
 
 
 
-@claims_blueprint.route('api/claims', methods=['GET'])
+@claims_blueprint.route('/api/claims', methods=['GET'])
 def get_claims():
     """Retrieve all claims."""
     try:
