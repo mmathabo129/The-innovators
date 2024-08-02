@@ -16,6 +16,7 @@ def prepare_new_data(new_data, min_policy_bind_date, min_incident_date, X_train_
     # Fill missing values
     new_data.fillna(0, inplace=True)
 
+
     # Convert date columns to datetime
     if 'policy_bind_date' in new_data.columns:
         new_data['policy_bind_date'] = pd.to_datetime(new_data['policy_bind_date'])

@@ -20,5 +20,9 @@ def create_app():
     from .predict_blueprint import predict_blueprint
     app.register_blueprint(predict_blueprint)
 
+    # Import and register the claims blueprint
+    from .claims import claims_blueprint
+    app.register_blueprint(claims_blueprint)
+
     return app
 
